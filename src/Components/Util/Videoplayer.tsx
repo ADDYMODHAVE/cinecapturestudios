@@ -16,7 +16,7 @@ const Player = (props: proptype) => {
     <>
       <Link href="/videogallery">
         <div className={classes.mainvideoplayer}>
-          <h2 className="overflow-y-hidden">{props.title}</h2>
+          <h2 className="overflow-y-hidden text-center">{props.title}</h2>
           <div style={{ overflow: "hidden" }}>
             <ReactPlayer
               url={props.link}

@@ -92,6 +92,7 @@ export function ImageControl(this: any) {
             <option value="engegment">Engegment Shoot</option>
             <option value="albumpage">Album Page</option>
             <option value="babyshoot">BABY SHOOT</option>
+            <option value="crowsel">CROWSEL</option>
           </select>
         </form>
       </div>

@@ -18,7 +18,7 @@ export default function Document() {
         <title>Cinecapture studio</title>
       </Head>
       <body>
-        <div style={{ display:"none" }}>
+        <div style={{ display: "none" }}>
           Roshan Chinchpure,Roshan Chinchpure photography,Roshan
           photography,best photographer in pune,manchar,ambegoan,india
           photographer pune ,best wedding photographer,wedding photographer,best

@@ -1,24 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;700&display=swap");
+
 .mainheader {
-  color: rgb(245, 32, 209);
   position: relative;
   left: 20px;
   bottom: 100px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  color: rgb(245, 243, 249);
 }
 .mainheader-fontsize {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bolder;
 }
 
 @media (min-width: 768px) {
   .mainheader-fontsize {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bolder;
   }
 }
 
 @media (min-width: 992px) {
   .mainheader-fontsize {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bolder;
   }
 }

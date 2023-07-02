@@ -55,6 +55,7 @@ export const Sitecontrol = () => {
               <option value="engegment">Engegment Shoot</option>
               <option value="albumpage">Album Page</option>
               <option value="babyshoot">BABY SHOOT</option>
+              <option value="crowsel">CROWSEL</option>
             </select>
           )}
           <div className="mb-3">
@@ -88,17 +89,17 @@ export const Sitecontrol = () => {
         </form>
       </div>
       <div className="d-flex justify-content-center m-5">
-        <Link href="/imagecontrol">
+        <Link href="/96ddd8a376411ec23a8507008f94b09eimage">
           <button type="button" className="btn btn-primary mx-2">
             IMAGE CONTROL
           </button>
         </Link>
-        <Link href="/videocontrol">
+        <Link href="/96ddd8a376411ec23a8507008f94b09evideo">
           <button type="button" className="btn btn-secondary mx-2">
             VIDEO CONTROL
           </button>
         </Link>
-        <Link href="/order">
+        <Link href="/96ddd8a376411ec23a8507008f94b09eorder">
           <button type="button" className="btn btn-success mx-2">
             ORDERS
           </button>

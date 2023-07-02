@@ -11,5 +11,6 @@
 }
 .mainvideoplayer h2 {
   color: aliceblue;
-  font-size: 2rem;
+  font-size: 1rem;
+  text-decoration: none;
 }

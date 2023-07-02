@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 
 import classes from "./FrontPageCrowsel.module.css";
 import { Context } from "@/Store/Context";
 import { contexttype } from "@/common/contexttype";
+import Loadingspinner from "@/common/Loading";
 
 type proptype = {
   link: string;
@@ -24,44 +25,59 @@ const ImageAdd = (props: proptype) => {
 
 export const FrontPageCrowsel = () => {
   const Data: contexttype = React.useContext<any>(Context);
+  const [Loading, setIsLoading] = useState(true);
   const Weddingarry = Data.AvilableImage.filter((data: any) => {
-    return data.category === "wedding";
+    return data.category === "crowsel";
   });
   const ThreeImages = Weddingarry.slice(0, 3);
 
   const UpdatedImage = ThreeImages.map((data: any) => {
     return <ImageAdd link={data.link} id={data.id} key={data.id} />;
   });
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(!Loading);
+    }, 2500);
+  }, []);
+
   return (
     <>
-      <Carousel>
-        <Carousel.Item interval={4000}>
-          <img
-            className="d-block w-100"
-            src={ThreeImages[0]?.link}
-            alt="First slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item interval={4500}>
-          <img
-            className="d-block w-100"
-            src={ThreeImages[1]?.link}
-            alt="First slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item interval={500}>
-          <img
-            className="d-block w-100"
-            src={ThreeImages[2]?.link}
-            alt="First slide"
-          />
-        </Carousel.Item>
-      </Carousel>
-      <div className={classes.mainheader}>
-        <h6 className={classes["mainheader-fontsize"]}>
-        “There is one thing the photo must contain – the feelings of the moment...”
-        </h6>
-      </div>
+      {Loading ? (
+        <Loadingspinner />
+      ) : (
+        <>
+          <Carousel>
+            <Carousel.Item interval={4000}>
+              <img
+                className="d-block w-100"
+                src={ThreeImages[0]?.link}
+                alt="First slide"
+              />
+            </Carousel.Item>
+            <Carousel.Item interval={4500}>
+              <img
+                className="d-block w-100"
+                src={ThreeImages[1]?.link}
+                alt="First slide"
+              />
+            </Carousel.Item>
+            <Carousel.Item interval={500}>
+              <img
+                className="d-block w-100"
+                src={ThreeImages[2]?.link}
+                alt="First slide"
+              />
+            </Carousel.Item>
+          </Carousel>
+          <div className={classes.mainheader}>
+            <h6 className={classes["mainheader-fontsize"]}>
+              “There is one thing the photo must contain – the feelings of the
+              moment...”
+            </h6>
+          </div>
+        </>
+      )}
     </>
   );
 };
