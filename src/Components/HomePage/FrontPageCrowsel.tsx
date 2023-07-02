@@ -39,7 +39,7 @@ export const FrontPageCrowsel = () => {
     setTimeout(() => {
       setIsLoading(false);
       firstimeload = false;
-    }, 300);
+    }, 2500);
   }, []);
 
   return (
