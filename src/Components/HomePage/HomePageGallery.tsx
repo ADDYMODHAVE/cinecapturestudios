@@ -10,8 +10,7 @@ type image = {
   link: string;
   id: string;
 };
-let loadfirsttime = true;
-
+let firstimeload = true;
 const ImageAdd = (props: image) => {
   return (
     <Link href="/gallery" className="overflow-hidden">
@@ -21,19 +20,21 @@ const ImageAdd = (props: image) => {
 };
 
 export const HomePageGallery = () => {
+  const [loading, setIsLoading] = React.useState(true);
   const Data: contexttype = React.useContext<any>(Context);
   const UpdatedImage = Data.AvilableImage.slice(0, 16).map((data: any) => {
     return <ImageAdd link={data.link} id={data.id} key={data.id} />;
   });
   React.useEffect(() => {
     setTimeout(() => {
-      loadfirsttime = false;
-    }, 500);
+      setIsLoading(false);
+      firstimeload = false;
+    }, 1500);
   }, []);
 
   return (
     <>
-      {loadfirsttime ? (
+      {firstimeload ? (
         <Loadingspinner />
       ) : (
         <div className={classes.frontpagemain}>{UpdatedImage}</div>

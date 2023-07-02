@@ -10,7 +10,7 @@ type proptype = {
   link: string;
   id: string;
 };
-let loadfirsttime = true;
+let firstimeload = true;
 const ImageAdd = (props: proptype) => {
   return (
     <Carousel.Item interval={2000}>
@@ -25,7 +25,7 @@ const ImageAdd = (props: proptype) => {
 
 export const FrontPageCrowsel = () => {
   const Data: contexttype = React.useContext<any>(Context);
-
+  const [loading, setIsLoading] = React.useState(true);
   const Weddingarry = Data.AvilableImage.filter((data: any) => {
     return data.category === "crowsel";
   });
@@ -37,13 +37,14 @@ export const FrontPageCrowsel = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      loadfirsttime = false;
+      setIsLoading(false);
+      firstimeload = false;
     }, 300);
   }, []);
 
   return (
     <>
-      {loadfirsttime ? (
+      {firstimeload ? (
         <Loadingspinner />
       ) : (
         <>
