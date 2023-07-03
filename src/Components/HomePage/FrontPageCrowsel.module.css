@@ -3,20 +3,31 @@
 .mainheader {
   position: relative;
   left: 20px;
-  bottom: 100px;
+  bottom: 50px;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
   color: rgb(245, 243, 249);
 }
-.mainheader-fontsize {
-  font-size: 15px;
-  font-weight: bolder;
+
+@media (min-width: 576px) {
+  .mainheader-fontsize {
+    font-size: 22px;
+  }
 }
 
 @media (min-width: 768px) {
   .mainheader-fontsize {
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bolder;
+    -webkit-text-stroke: 1px black;
+  }
+  .mainheader {
+    position: relative;
+    left: 20px;
+    bottom: 100px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    color: rgb(245, 243, 249);
   }
 }
 

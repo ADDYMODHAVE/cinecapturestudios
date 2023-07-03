@@ -7,7 +7,7 @@ export const BookOrder = () => {
   const OnGetUserOrder = (e: any) => {
     e.preventDefault();
 
-    console.log(new Date(e.target.date.value).getTime())
+    console.log(new Date(e.target.date.value).getTime());
 
     const dateformat = new Date(e.target.date.value).toLocaleDateString(
       "en-US",
@@ -42,10 +42,13 @@ export const BookOrder = () => {
 
   return (
     <>
-      <div className="d-flex flex-column align-items-center">
+      <div
+        className="d-flex flex-column align-items-center"
+        style={{ margin: "0 15vw" }}
+      >
         <h1 className="text-light overflow-hidden">Book Your Order Now</h1>
         <form
-          className="bg-dark text-light fw-bold text-center p-3 w-50"
+          className="bg-dark text-light fw-bold text-center p-3 w-100 w-lg-50"
           onSubmit={OnGetUserOrder}
         >
           <div>
