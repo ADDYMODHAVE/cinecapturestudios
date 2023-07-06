@@ -23,11 +23,10 @@ export const SmallIntro = () => {
             <span className="text-info fw-bold">ROSHAN CHINCHPURE.</span> I am
             <span className="text-info fw-bold">
               {" "}
-              Photographer & Cinematographer
+              Photographer & Cinematographer from Manchar Pune
             </span>{" "}
-            . I have 8 years exprience and I am living In{" "}
-            <span className="text-info fw-bold"> Pune</span> . Currently working
-            as full time Photographer &{" "}
+            .I have 8 years exprience.Currently working as full time
+            Photographer &{" "}
             <span className="text-info fw-bold">Cinematographer.</span> I am
             taking orders from all over{" "}
             <span className="text-info fw-bold">India.</span>.
