@@ -13,7 +13,7 @@ export default function Home() {
         <title>cinecapturestudio</title>
         <meta
           name="description"
-          content={`Hello My name is ROSHAN CHINCHPURE. I am Photographer & Cinematographer . I have 8 years exprience and I am living In Pune . Currently working as full time Photographer & Cinematographer. I am taking orders from all over India..`}
+          content={`Hello My name is ROSHAN CHINCHPURE.Best photographer in pune manchar.`}
         />
         <meta
           name="keywords"
@@ -30,7 +30,7 @@ export default function Home() {
         <meta property="og:title" content="cinecapturestudio" />
         <meta
           property="og:description"
-          content="Hello My name is ROSHAN CHINCHPURE. I am Photographer & Cinematographer . I have 8 years exprience and I am living In Pune . Currently working as full time Photographer & Cinematographer. I am taking orders from all over India.."
+          content="Hello My name is ROSHAN CHINCHPURE.Best photographer in pune manchar."
         />
         <meta
           property="og:image"
@@ -39,7 +39,7 @@ export default function Home() {
         <meta name="twitter:title" content="cinecapturestudio" />
         <meta
           name="twitter:description"
-          content="Hello My name is ROSHAN CHINCHPURE. I am Photographer & Cinematographer . I have 8 years exprience and I am living In Pune . Currently working as full time Photographer & Cinematographer. I am taking orders from all over India.."
+          content="Hello My name is ROSHAN CHINCHPURE.Best photographer in pune manchar."
         />
         <meta
           name="twitter:image"
