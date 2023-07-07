@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./GalleryPhotoViewer.module.css";
 
 type proptype = {
@@ -6,15 +6,23 @@ type proptype = {
   ImageLink: {
     link: string;
     id: string;
+    like: number;
   };
   OnSelectButtonDisabled: any;
 };
 
 export const GalleryPhotoViwer = (props: proptype) => {
   const [UserLikedPic, SetLikedPic] = React.useState(false);
+  const [likes,SetIsLike]=useState<any>(props.ImageLink.like);
 
   const LikeHandler = () => {
     SetLikedPic(!UserLikedPic);
+    if(!UserLikedPic){
+      SetIsLike(likes+1);
+    }
+    else{
+      SetIsLike(likes-1);
+    }
   };
 
   const CloseImageViwer = () => {
@@ -65,7 +73,7 @@ export const GalleryPhotoViwer = (props: proptype) => {
 
           <span className="m-auto my-2">
             <i className="fa-solid fa-thumbs-up fs-5 me-3"></i>
-            {Math.floor(Math.random() * 11)}
+            {likes}
           </span>
         </div>
       </div>

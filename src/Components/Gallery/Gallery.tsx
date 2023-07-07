@@ -24,6 +24,7 @@ function Gallery(this: any) {
   const [SelectButtonClicked, SetSelect] = React.useState(false);
   const [ImageLink, SetImageLink] = React.useState<any>("");
   const Data: contexttype = React.useContext<any>(Context);
+  const RandomLikes = Math.floor(Math.random() * (50 - 15 + 1)) + 15;
 
   const CategoryUpdate = (e: any) => {
     SetIsCategory(e.target.value);
@@ -41,24 +42,26 @@ function Gallery(this: any) {
     SetImageLink(link);
     SetIsImageViwer(!CloseImageViwer);
     SetSelect(true);
-
   };
 
   const UpdatedImageList = CategoryWiseImager.map((data: any) => {
     return (
       <div
         className="overflow-hidden"
-        onClick={ShowImageViwer.bind(this,{link:data.link,id:data.id})}
+        onClick={ShowImageViwer.bind(this, {
+          link: data.link,
+          id: data.id,
+          like: RandomLikes,
+        })}
       >
         <AddDynamicCategory link={data.link} id={data.id} key={data.id} />
       </div>
     );
   });
 
-  const OnSelectButtonHandler=()=>{
+  const OnSelectButtonHandler = () => {
     SetSelect(false);
-  }
-
+  };
 
   useEffect(() => {
     UpdateCategory();
