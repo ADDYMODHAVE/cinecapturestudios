@@ -1,0 +1,45 @@
+.galleryPhotoPosition {
+    position: fixed;
+    z-index: 100;
+    top:32vw;
+}
+@media (min-width: 576px) {
+    .galleryPhotoPosition {
+        position: absolute;
+        z-index: 100;
+        top:27vw;
+    }
+}
+
+@media (min-width: 700px) {
+    .galleryPhotoPosition {
+        position: absolute;
+        z-index: 100;
+        top:16vw;
+    }
+}
+
+@media (min-width: 992px) {
+    .galleryPhotoPosition {
+        position: absolute;
+        z-index: 100;
+        top:27vw;
+    }
+}
+@media (min-width: 1107px) {
+    .galleryPhotoPosition {
+        position: absolute;
+        z-index: 100;
+        top:13vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .galleryPhotoPosition {
+        position: absolute;
+        z-index: 100;
+        top:9vw;
+    }
+}
+
+
